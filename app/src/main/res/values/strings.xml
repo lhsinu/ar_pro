@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">AR</string>
+
+
+    // Main
+    <string name="str_main_title">Main</string>
+
+    // FineDust
+    <string name="str_finedust_title_eng">Fine Dust</string>
+    <string name="str_finedust_title">미세 먼지</string>
+    <string name="str_finedust_PM1.0">PM1.0</string>
+    <string name="str_finedust_PM2.5">PM2.5</string>
+    <string name="str_finedust_PM10.0">PM10.0</string>
+    <string name="str_finedust_human">HUMAN</string>
+    <string name="str_finedust_people">P</string>
+
+    // Gas
+    <string name="str_gas_title_eng">GAS</string>
+    <string name="str_gas_title">가스</string>
+    <string name="str_gas_no2">NO2</string>
+    <string name="str_gas_co">CO</string>
+    <string name="str_gas_nh3">NH3</string>
+    <string name="str_gas_c4h10">C4H10</string>
+    <string name="str_gas_co2">CO2</string>
+    <string name="str_gas_ch4">CH4</string>
+    <string name="str_gas_human">HUMAN</string>
+    <string name="str_gas_ppm">PPM</string>
+    <string name="str_gas_people">P</string>
+
+    // Gyro
+    <string name="str_gyro_title">GYRO</string>
+
+    // Temperature
+    <string name="str_temperature_title_eng">Temperature</string>
+    <string name="str_temperature_title">온도</string>
+    <string name="str_temperature_current_temperature">현재 기온은</string>
+    <string name="str_main_default_temperature">\u00B0C</string>
+    <string name="str_temperature_current_humidity">현재 습도는</string>
+    <string name="str_temperature_end_point">% 입니다.</string>
+
+    // Setting
+    <string name="str_setting_title_eng">Settings</string>
+    <string name="str_setting_title">설정</string>
+    <string name="str_setting_pressure_call">Haptic-Pressure Call</string>
+    <string name="str_setting_gyro_call">Gyro-sensing Call</string>
+    <string name="str_setting_call_112">112에 신고</string>
+    <string name="str_setting_call_119">119에 신고</string>
+    <string name="str_setting_contact">전화번호 입력</string>
+    <string name="str_setting_112">112</string>
+    <string name="str_setting_119">119</string>
+    <string name="str_setting_emergency_call">Emergency Call</string>
+
+    // Bluetooth
+    <string name="str_toast_turn_off_do_not_disturb">Please turn off Do Not Disturb mode.</string>
+    <string name="str_bluetooth_title">Bluetooth 기기 검색</string>
+    <string name="str_bluetooth_not_supported">Bluetooth not supported.</string>
+    <string name="str_bluetooth_unknown_characteristic">Unknown characteristic</string>
+    <string name="str_bluetooth_unknown_service">Unknown service</string>
+
+    // Loading
+    <string name="str_loding_loading">LOADING</string>
+
+    // Device Setiing
+    <string name="strDBGet">GET</string>
+    <string name="strGas">GAS</string>
+    <string name="strGyro">GYRO</string>
+    <string name="strSettingDeviceTitle">센서 설정</string>
+    <string name="strReset">RESET</string>
+
+
+    // Safety Alert
+    <string name="str_emergency_title_eng">Safety Alert</string>
+    <string name="str_emergency_title">Safety Alert</string>
+    <string name="str_emergency_gas_title">GAS</string>
+    <string name="str_emergency_accident_title">ACCIDENT</string>
+
+    <string name="str_emergency_PM2.5">Particulate matter(PM2.5)</string>
+    <string name="str_emergency_PM10.0">Particulate matter(PM10.0)</string>
+    <string name="str_emergency_ch4">Methane (CH4)</string>
+    <string name="str_emergency_co">Carbon monoxide (CO)</string>
+    <string name="str_emergency_co2">Carbon dioxide (CO2)</string>
+    <string name="str_emergency_nh3">Ammonia (NH3)</string>
+    <string name="str_emergency_no2">Nitrogen dioxide (NO2)</string>
+    <string name="str_emergency_human">NUMBER OF PEOPLE</string>
+    <string name="str_emergency_ppm">PPM</string>
+    <string name="str_emergency_people">P</string>
+
+</resources>

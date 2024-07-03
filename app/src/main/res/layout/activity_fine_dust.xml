@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".finedust.FineDustActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorActionBar"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/bt_toolbar_back"
+                android:layout_width="9dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/common_backspace_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_finedust_title"
+                android:textColor="@color/colorWhite"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/iv_finedust_bg"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tb_toolbar"
+        app:srcCompat="@drawable/finedust_bg" />
+
+<!--    PM1.0-->
+    <TextView
+        android:id="@+id/tv_finedust1_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_finedust_PM1.0"
+        android:textSize="25sp"
+        android:layout_marginTop="50dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/iv_finedust_bg"
+        app:layout_constraintTop_toBottomOf="@+id/iv_finedust_bg" />
+
+    <ImageView
+        android:id="@+id/iv_finedust_um_bg"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/iv_finedust_bg"
+        app:layout_constraintEnd_toEndOf="@+id/iv_finedust_bg"
+        app:srcCompat="@drawable/finedust_um" />
+
+    <TextView
+        android:id="@+id/tv_finedust1_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="60sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_finedust_um_bg"
+        app:layout_constraintEnd_toStartOf="@+id/iv_finedust_um_bg" />
+
+<!--    PM2.5-->
+
+    <TextView
+        android:id="@+id/tv_finedust2_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/str_finedust_PM2.5"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/iv_finedust_bg"
+        app:layout_constraintTop_toBottomOf="@+id/iv_finedust_bg" />
+
+    <ImageView
+        android:id="@+id/iv_finedust2_um_bg"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_finedust_bg"
+        app:layout_constraintTop_toBottomOf="@+id/iv_finedust_bg"
+        app:srcCompat="@drawable/finedust_um" />
+
+    <TextView
+        android:id="@+id/tv_finedust2_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_finedust2_um_bg"
+        app:layout_constraintEnd_toStartOf="@+id/iv_finedust2_um_bg" />
+
+    <!--    PM10.0-->
+
+    <TextView
+        android:id="@+id/tv_finedust3_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/str_finedust_PM10.0"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_finedust2_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_finedust2_title" />
+
+    <ImageView
+        android:id="@+id/iv_finedust3_um_bg"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_finedust_bg"
+        app:layout_constraintTop_toBottomOf="@+id/iv_finedust2_um_bg"
+        app:srcCompat="@drawable/finedust_um" />
+
+    <TextView
+        android:id="@+id/tv_finedust3_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_finedust3_um_bg"
+        app:layout_constraintEnd_toStartOf="@+id/iv_finedust3_um_bg" />
+
+    <TextView
+        android:id="@+id/tv_human_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/str_finedust_human"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_finedust3_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_finedust3_title" />
+
+    <TextView
+        android:id="@+id/iv_human_p"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="15dp"
+        android:text="@string/str_finedust_people"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/iv_finedust3_um_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_human_title" />
+
+    <TextView
+        android:id="@+id/tv_human_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="0"
+        android:textSize="60sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_finedust3_text"
+        app:layout_constraintEnd_toEndOf="@+id/tv_finedust3_text" />
+</androidx.constraintlayout.widget.ConstraintLayout>

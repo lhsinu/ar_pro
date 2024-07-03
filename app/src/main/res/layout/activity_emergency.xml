@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".emergency.EmergencyActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorActionBar"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/bt_toolbar_back"
+                android:layout_width="9dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/common_backspace_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_emergency_title"
+                android:textColor="@color/colorWhite"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clEmergencyGas"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tb_toolbar" >
+
+
+        <TextView
+            android:id="@+id/tv_emergency_gas_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/str_emergency_gas_title"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--    PM2.5-->
+
+        <TextView
+            android:id="@+id/tv_emergency_pm2_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/str_emergency_PM2.5"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_emergency_gas_title" />
+
+        <TextView
+            android:id="@+id/tv_emergency_pm2_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="0"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="@+id/tv_emergency_pm2_title"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!--    PM10.0-->
+
+        <TextView
+            android:id="@+id/tv_emergency_pm1_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/str_emergency_PM10.0"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_emergency_pm2_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_emergency_pm2_title" />
+
+        <TextView
+            android:id="@+id/tv_emergency_pm1_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="0"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="@+id/tv_emergency_pm1_title"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!--    ch4-->
+
+        <TextView
+            android:id="@+id/tv_emergency_ch4_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/str_emergency_ch4"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_emergency_pm2_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_emergency_pm1_title" />
+
+        <TextView
+            android:id="@+id/tv_emergency_ch4_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="0"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="@+id/tv_emergency_ch4_title"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!--    co-->
+
+        <TextView
+            android:id="@+id/tv_emergency_co_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/str_emergency_co"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_emergency_pm2_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_emergency_ch4_title" />
+
+        <TextView
+            android:id="@+id/tv_emergency_co_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="0"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="@+id/tv_emergency_co_title"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!--    co2-->
+
+        <TextView
+            android:id="@+id/tv_emergency_co2_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/str_emergency_co2"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_emergency_pm2_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_emergency_co_title" />
+
+        <TextView
+            android:id="@+id/tv_emergency_co2_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="0"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="@+id/tv_emergency_co2_title"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!--    nh3-->
+
+        <TextView
+            android:id="@+id/tv_emergency_nh3_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/str_emergency_nh3"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_emergency_pm2_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_emergency_co2_title" />
+
+        <TextView
+            android:id="@+id/tv_emergency_nh3_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="0"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="@+id/tv_emergency_nh3_title"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!--    no2-->
+
+        <TextView
+            android:id="@+id/tv_emergency_no2_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/str_emergency_no2"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_emergency_pm2_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_emergency_nh3_title" />
+
+        <TextView
+            android:id="@+id/tv_emergency_no2_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="0"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="@+id/tv_emergency_no2_title"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+        <TextView
+            android:id="@+id/tv_emergency_human_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/str_emergency_human"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_emergency_pm2_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_emergency_no2_title" />
+
+        <TextView
+            android:id="@+id/tv_emergency_human_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="0"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="@+id/tv_emergency_human_title"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+<!--        <ImageView-->
+<!--            android:id="@+id/iv_gas_center"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="150dp"-->
+<!--            app:srcCompat="@drawable/gas_bg"-->
+<!--            tools:layout_editor_absoluteX="138dp"-->
+<!--            tools:layout_editor_absoluteY="119dp" />-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/dvEmergency"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_alignBottom="@+id/clEmergencyGas"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clEmergencyGas" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clEmergencyGyro"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorActionBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dvEmergency" >
+
+
+        <TextView
+            android:id="@+id/tv_emergency_gyro_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/str_emergency_accident_title"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_gyro_ready"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/gyrosensing_ready_image" />
+
+
+        <ImageView
+            android:id="@+id/iv_gyro_onoff"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/gyrosensing_emergency_image2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
